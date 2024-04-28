@@ -1,0 +1,158 @@
+inserciones de equipos:
+
+Equipos //
+
+
+db.Equipos.insertMany([
+    { "nombre": "Colombia", "pais": "Colombia" },
+    { "nombre": "Uruguay", "pais": "Uruguay" },
+    { "nombre": "Chile", "pais": "Chile" },
+    { "nombre": "Perú", "pais": "Perú" }
+])
+
+
+
+//posiciones:
+
+
+db.Posiciones.insertMany([
+    { "nombre": "Delantero" },
+    { "nombre": "Centrocampista" },
+    { "nombre": "Defensa" },
+    { "nombre": "Portero" }
+])
+
+
+
+
+Participantes //
+
+
+db.Participantes.insertMany([
+    { "nombre": "James Rodríguez", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Radamel Falcao", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "David Ospina", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360654") },
+    { "nombre": "Jeison Murillo", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360653") },
+    { "nombre": "Juan Cuadrado", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "Renato Tapia", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Paolo Guerrero", "equipo": ObjectId("662d2cb3439f47048e360650"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "Pedro Gallese", "equipo": ObjectId("662d2cb3439f47048e360650"), "posicion": ObjectId("662d2d6e439f47048e360654") },
+    { "nombre": "Yoshimar Yotún", "equipo": ObjectId("662d2cb3439f47048e360650"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Miguel Trauco", "equipo": ObjectId("662d2cb3439f47048e360650"), "posicion": ObjectId("662d2d6e439f47048e360653") },
+    { "nombre": "Luis Suárez", "equipo": ObjectId("662d2cb3439f47048e36064e"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "Edinson Cavani", "equipo": ObjectId("662d2cb3439f47048e36064e"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "Diego Godín", "equipo": ObjectId("662d2cb3439f47048e36064e"), "posicion": ObjectId("662d2d6e439f47048e360653") },
+    { "nombre": "Matías Vecino", "equipo": ObjectId("662d2cb3439f47048e36064e"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Nicolás Lodeiro", "equipo": ObjectId("662d2cb3439f47048e36064e"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Fernando Muslera", "equipo": ObjectId("662d2cb3439f47048e36064e"), "posicion": ObjectId("662d2d6e439f47048e360654") },
+    { "nombre": "Arturo Vidal", "equipo": ObjectId("662d2cb3439f47048e36064f"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Alexis Sánchez", "equipo": ObjectId("662d2cb3439f47048e36064f"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "Claudio Bravo", "equipo": ObjectId("662d2cb3439f47048e36064f"), "posicion": ObjectId("662d2d6e439f47048e360654") },
+    { "nombre": "Paolo Guerrero", "equipo": ObjectId("662d2cb3439f47048e360650"), "posicion": ObjectId("662d2d6e439f47048e360651") },
+    { "nombre": "Pedro Aquino", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360652") },
+    { "nombre": "Aldo Corzo", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360653") },
+    { "nombre": "Carlos Cáceda", "equipo": ObjectId("662d2cb3439f47048e36064d"), "posicion": ObjectId("662d2d6e439f47048e360654") }
+])
+
+
+//entrenadores 
+db.Entrenadores.insertMany([
+    {
+        "nombre": "Carlos Queiroz",
+        "equipo_id": ObjectId("662d2cb3439f47048e36064d")  // Colombia
+    },
+    {
+        "nombre": "Óscar Tabárez",
+        "equipo_id": ObjectId("662d2cb3439f47048e36064e")  // Uruguay
+    },
+    {
+        "nombre": "Reinaldo Rueda",
+        "equipo_id": ObjectId("662d2cb3439f47048e36064f")  // Chile
+    },
+    {
+        "nombre": "Ricardo Gareca",
+        "equipo_id": ObjectId("662d2cb3439f47048e360650")  // Perú
+    }
+])
+
+
+//Arbitros
+
+db.arbitros.insertMany([
+    {
+        "nombre": "John Doe",
+        "nacionalidad": "Nacional",
+        "categoria": "Principal",
+        "equipo_id": ObjectId("662d2cb3439f47048e36064d") // Colombia
+    },
+    {
+        "nombre": "Jane Smith",
+        "nacionalidad": "Internacional",
+        "categoria": "Asistente",
+        "equipo_id": ObjectId("662d2cb3439f47048e36064e") // Uruguay
+    },
+    {
+        "nombre": "Juan Pérez",
+        "nacionalidad": "Local",
+        "categoria": "Principal",
+        "equipo_id": ObjectId("662d2cb3439f47048e36064f") // Chile
+    },
+    {
+        "nombre": "María García",
+        "nacionalidad": "Nacional",
+        "categoria": "Asistente",
+        "equipo_id": ObjectId("662d2cb3439f47048e360650") // Perú
+    }
+])
+
+
+//encuentros
+db.Encuentros.insertMany([
+    {
+        "equipos": ["662d2cb3439f47048e36064d", "662d2cb3439f47048e36064e"],
+        "fecha": ISODate("2024-04-28T20:00:00Z"),
+        "arbitro_principal": {
+            "_id": "662d321f1f34d708e660668e",
+            "nombre": "John Doe"
+        },
+        
+    },
+    {
+        "equipos": ["662d2cb3439f47048e36064f", "662d2cb3439f47048e360650"],
+        "fecha": ISODate("2024-04-29T18:00:00Z"),
+        "arbitro_principal": {
+            "_id": "662d321f1f34d708e6606690",
+            "nombre": "Juan Pérez"
+        },
+        
+    }
+])
+
+
+resultados:
+
+db.Resultados.insertMany([
+  {
+    "encuentro_id": "662d33c7621fb2ee1973953e",
+    "marcador": {
+      "local": 2,
+      "visitante": 1
+    },
+    "informacion_extra": "El partido fue muy disputado"
+  },
+  {
+    "encuentro_id": "662d33c7621fb2ee1973953f",
+    "marcador": {
+      "local": 0,
+      "visitante": 3
+    },
+    "informacion_extra": "El equipo visitante dominó todo el partido"
+  }
+])
+
+
+
+
+
+
+
